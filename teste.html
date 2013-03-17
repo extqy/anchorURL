@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Teste</title>
+<script type="text/javascript" src="anchorUrl.min.js"></script> 
+<script type="text/javascript" >
+    anchorUrl.addPath('page-testing', function (path, args) {
+        alert(path);
+    })
+    anchorUrl.addPath('background', function (path, args) {
+        alert(path);
+        alert(args['t'])
+    })
+    anchorUrl.start();
+</script>
+
+</head>
+<body>
+    <a href="#/page-testing">Page Testing</a><br />
+    <a href="#/background?t=3">Page Testing</a>
+</body>
+</html>
